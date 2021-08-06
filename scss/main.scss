@@ -1,0 +1,66 @@
+/*======================================
+  -Job Application Task - StuntCoders
+  -Mobile First Aproche
+  -Author: Boris Perkovic
+  -Location: Belgrade
+  -E-mail: borisperkovic89@yahoo.com
+ ====================================== */
+
+ /* General and Typography */
+
+ @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap');
+
+ @import "variables";
+ @import "mixins";
+
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ }
+
+ body {
+  font-family: 'PT Sans', sans-serif;
+  padding: 0 5px;
+ }
+ 
+ h1,
+ h2,
+ h4 {
+  font-family: 'PT Serif', serif;
+ }
+
+/*======================================
+  HEADER SECTION
+====================================== */
+ .header {
+  padding: 40% 0%;
+  @include backgroundImage("../images/header.jpg");
+  .headings h1,
+  .headings p {
+    text-align: center;
+    color: $headingsTextColor;
+  }
+  .headings h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+  }
+  .headings p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+ }
+
+/*======================================
+  LEAD SECTION
+====================================== */
+ .lead {
+   padding: 10% 3%;
+   text-align: center;
+   font-size: 17px;
+   font-weight: 700;
+   letter-spacing: 1px;
+ }
+
