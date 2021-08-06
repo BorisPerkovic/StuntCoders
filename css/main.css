@@ -1,6 +1,6 @@
 /*======================================
   -Job Application Task - StuntCoders
-  -Mobile First Aproche
+  -Mobile First Approach
   -Author: Boris Perkovic
   -Location: Belgrade
   -E-mail: borisperkovic89@yahoo.com
@@ -15,7 +15,7 @@
 
 body {
   font-family: 'PT Sans', sans-serif;
-  padding: 0 5px; }
+  padding: 0 10px; }
 
 h1,
 h2,
@@ -26,8 +26,11 @@ h4 {
   HEADER SECTION
 ====================================== */
 .header {
-  padding: 40% 0%;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  height: 50vh;
   background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,11 +41,20 @@ h4 {
     color: #fff; }
   .header .headings h1 {
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 4px; }
+    @media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
+      .header .headings h1 {
+        font-size: 4rem; } }
   .header .headings p {
-    font-size: 1.2rem;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    font-weight: 700; }
+    @media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
+      .header .headings p {
+        font-size: 1.8rem; } }
+  @media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
+    .header {
+      height: 100vh; } }
 
 /*======================================
   LEAD SECTION
@@ -50,8 +62,62 @@ h4 {
 .lead {
   padding: 10% 3%;
   text-align: center;
-  font-size: 17px;
-  font-weight: 700;
   letter-spacing: 1px; }
+
+ /*======================================
+  MAIN SECTION
+====================================== */
+.main {
+  /* step one section */
+  /* step two section */
+  /* step three section */ }
+  .main article div {
+    margin: 10px; }
+  .main article .numbers {
+    background-color: #86ddf3;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem; }
+  .main article .articlesText {
+    text-align: center; }
+  .main article .articlesText h3 {
+    margin-bottom: 1rem;
+    text-transform: uppercase; }
+  .main .step-1 .bgImage {
+    background-image: url("../images/step-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px; }
+  .main .step-2 .bgImage {
+    background-image: url("../images/step-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px; }
+  .main .step-3 .bgImage {
+    background-image: url("../images/step-3-4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px; }
+
+/*======================================
+  FOOTER SECTION
+====================================== */
+.footer div {
+  margin: 10px;
+  text-align: center; }
+.footer span {
+  font-size: 3rem;
+  color: #86ddf3; }
+.footer .bgImage {
+  background-image: url("../images/footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px; }
 
 /*# sourceMappingURL=main.css.map */

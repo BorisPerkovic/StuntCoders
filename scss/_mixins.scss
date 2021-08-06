@@ -1,7 +1,27 @@
 @mixin backgroundImage($url) {
-  width: 100%;
   background-image: url($url);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+@mixin numbersPlaceholder () {
+  background-color: #86ddf3;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+@mixin phone-landscape {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
 }
