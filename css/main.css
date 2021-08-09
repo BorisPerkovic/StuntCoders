@@ -22,6 +22,24 @@ h2,
 h4 {
   font-family: 'PT Serif', serif; }
 
+.container {
+  margin: 0 auto;
+  padding: 10px; }
+  @media (max-width: 567px) {
+    .container {
+      max-width: 400px; } }
+  @media (min-width: 568px) and (max-width: 1023px) and (orientation: landscape) {
+    .container {
+      width: 600px; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      min-width: 700px;
+      max-width: 900px; } }
+  @media (min-width: 1024px) {
+    .container {
+      min-width: 1000px;
+      max-width: 1400px; } }
+
 /*======================================
   HEADER SECTION
 ====================================== */
@@ -34,27 +52,36 @@ h4 {
   background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  height: 250px; }
   .header .headings h1,
   .header .headings p {
     text-align: center;
     color: #fff; }
   .header .headings h1 {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.7rem;
     letter-spacing: 4px; }
-    @media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
+    @media (min-width: 568px) and (max-width: 1023px) and (orientation: landscape) {
       .header .headings h1 {
-        font-size: 4rem; } }
+        font-size: 3.7rem; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .header .headings h1 {
+        font-size: 4.1rem; } }
   .header .headings p {
-    letter-spacing: 1px;
     font-weight: 700; }
-    @media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
+    @media (min-width: 568px) and (max-width: 1023px) and (orientation: landscape) {
       .header .headings p {
         font-size: 1.8rem; } }
-  @media (min-width: 568px) and (max-width: 767px) and (orientation: landscape) {
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .header .headings p {
+        font-size: 1.9rem; } }
+  @media (min-width: 568px) and (max-width: 1023px) and (orientation: landscape) {
     .header {
       height: 100vh; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+      height: 80vh; } }
 
 /*======================================
   LEAD SECTION
@@ -63,61 +90,123 @@ h4 {
   padding: 10% 3%;
   text-align: center;
   letter-spacing: 1px; }
+  @media (min-width: 568px) and (max-width: 1023px) and (orientation: landscape) {
+    .lead {
+      font-size: 1.1rem; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .lead {
+      font-size: 1.4rem; } }
 
- /*======================================
+/*======================================
   MAIN SECTION
 ====================================== */
 .main {
-  /* step one section */
-  /* step two section */
-  /* step three section */ }
-  .main article div {
-    margin: 10px; }
-  .main article .numbers {
+  /* step one section image */
+  /* step two section image */
+  /* step three section image */
+  /* main section grid-rows */ }
+  .main .container {
+    display: grid;
+    grid-gap: 15px; }
+    @media (min-width: 568px) and (max-width: 1023px) {
+      .main .container {
+        grid-template-columns: 1fr 1fr; } }
+  .main .numbers {
     background-color: #86ddf3;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem; }
-  .main article .articlesText {
+    @media (min-width: 568px) and (max-width: 1023px) and (orientation: landscape) {
+      .main .numbers {
+        font-size: 7rem; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .main .numbers {
+        font-size: 7rem; } }
+  .main .articlesText {
     text-align: center; }
-  .main article .articlesText h3 {
-    margin-bottom: 1rem;
-    text-transform: uppercase; }
-  .main .step-1 .bgImage {
+    .main .articlesText h3 {
+      margin-bottom: 1rem;
+      text-transform: uppercase; }
+    @media (min-width: 568px) and (max-width: 1023px) and (orientation: landscape) {
+      .main .articlesText {
+        font-size: 1.5rem; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .main .articlesText {
+        font-size: 1.5rem; } }
+  .main .step-1-bgImage {
     background-image: url("../images/step-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 400px; }
-  .main .step-2 .bgImage {
+    height: 250px; }
+  .main .step-2-bgImage {
     background-image: url("../images/step-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 400px; }
-  .main .step-3 .bgImage {
+    height: 250px; }
+    @media (min-width: 568px) and (max-width: 1023px) {
+      .main .step-2-bgImage {
+        height: 450px;
+        grid-column: 2;
+        grid-row: 4 / 6; } }
+  .main .step-3-bgImage {
     background-image: url("../images/step-3-4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 400px; }
+    height: 250px; }
+    @media (min-width: 568px) and (max-width: 1023px) {
+      .main .step-3-bgImage {
+        height: 400px;
+        grid-row: 7 / 9; } }
+  @media (min-width: 568px) and (max-width: 1023px) {
+    .main .step-2-numbers {
+      grid-column: 2;
+      grid-row: span 2 / 4; } }
+  @media (min-width: 568px) and (max-width: 1023px) {
+    .main .step-3-numbers {
+      grid-row: 5 / 7; } }
+  @media (min-width: 568px) and (max-width: 1023px) {
+    .main .step-3-4-numbers {
+      grid-column: 2;
+      grid-row: 8 / 10; } }
+  @media (min-width: 568px) and (max-width: 1023px) {
+    .main .step-2-text {
+      grid-row: 3/5; } }
+  @media (min-width: 568px) and (max-width: 1023px) {
+    .main .step-3-text {
+      grid-column: 2;
+      grid-row: 6 / 8; } }
 
 /*======================================
   FOOTER SECTION
 ====================================== */
+.footer .container {
+  display: grid;
+  grid-gap: 15px; }
 .footer div {
-  margin: 10px;
   text-align: center; }
 .footer span {
   font-size: 3rem;
   color: #86ddf3; }
+@media (min-width: 568px) and (max-width: 1023px) {
+  .footer .footerText,
+  .footer .footerTitle {
+    text-align: left;
+    font-size: 1.5rem; } }
+@media (min-width: 568px) and (max-width: 1023px) {
+  .footer .footerTitle {
+    display: grid;
+    grid-template-columns: minmax(150px, min-content); } }
 .footer .bgImage {
   background-image: url("../images/footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 250px;
   height: 400px; }
 
 /*# sourceMappingURL=main.css.map */
