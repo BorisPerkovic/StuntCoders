@@ -19,6 +19,10 @@
   @include tablet {
     font-size: 7rem;
   }
+
+  @include desktop() {
+    font-size: 12rem;
+  }
 }
 
 @mixin phone {

@@ -84,6 +84,10 @@ h4 {
     @include tablet {
       font-size: 4.1rem;
     }
+
+    @include desktop {
+      font-size: 7rem;
+    }
   }
 
   .headings p {
@@ -96,6 +100,10 @@ h4 {
     @include tablet {
       font-size: 1.9rem;
     }
+
+    @include desktop {
+      font-size: 3.3rem;
+    }
   }
 
   @include phone-landscape {
@@ -103,6 +111,10 @@ h4 {
   }
 
   @include tablet {
+    height: 80vh;
+  }
+
+  @include desktop{
     height: 80vh;
   }
 }
@@ -122,6 +134,11 @@ h4 {
   @include tablet {
     font-size: 1.4rem;
   }
+
+  @include desktop{
+    padding: 5% 3%;
+    font-size: 1.6rem;
+  }
 }
 
 /*======================================
@@ -135,6 +152,11 @@ h4 {
 
     @include phone-tablet {
       grid-template-columns: 1fr 1fr;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr 1.2fr;
+      grid-gap: 20px;
     }
   }
 
@@ -155,14 +177,22 @@ h4 {
     @include tablet {
       font-size: 1.5rem;
     }
+
+    @include desktop {
+      font-size: 2rem;
+      padding: 10px;
+    }
   }
 
-  /* step one section image */
+  /* step one section image - grid rows */
   .step-1-bgImage {
     @include backgroundImage("../images/step-1.jpg");
+    @include desktop {
+      height: 100%;
+    }
   }
 
-  /* step two section image */
+  /* step two section image - grid rows */
   .step-2-bgImage {
     @include backgroundImage("../images/step-2.jpg");
 
@@ -171,15 +201,27 @@ h4 {
       grid-column: 2;
       grid-row: 4 / 6;
     }
+
+    @include desktop {
+      height: 100%;
+      grid-column: 1;
+      grid-row: 2;
+    }
   }
 
-  /* step three section image */
+  /* step three section image - grid rows */
   .step-3-bgImage {
     @include backgroundImage("../images/step-3-4.jpg");
 
     @include phone-tablet {
       height: 400px;
       grid-row: 7 / 9;
+    }
+
+    @include desktop {
+      height: 100%;
+      grid-column: 3;
+      grid-row: 3 / 5;
     }
   }
 
@@ -223,32 +265,65 @@ h4 {
   FOOTER SECTION
 ====================================== */
 .footer {
+  @include desktop {
+    position: relative;
+  }
   .container {
     display: grid;
     grid-gap: $gridGap;
+    @include desktop {
+      margin-top: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
   }
 
   div {
     text-align: center;
   }
 
-  span {
+  .span {
     font-size: 3rem;
+    font-weight: 700;
     color: #86ddf3;
+    @include desktop {
+      grid-row: 2;
+      grid-column: 1 / 4;
+      margin-top: -150px;
+      margin-left: 10px;
+      z-index: 2;
+      font-size: 7.2rem;
+      letter-spacing: 5px;
+      .textWhite {
+        color: #fff;
+      }
+    }
   }
 
-  .footerText,
-  .footerTitle {
+  .footerText {
     @include phone-tablet {
       text-align: left;
       font-size: 1.5rem;
+    }
+
+    @include desktop {
+      text-align: left;
+      font-size: 2rem;
     }
   }
 
   .footerTitle {
     @include phone-tablet {
+      text-align: left;
       display: grid;
       grid-template-columns: minmax(150px, min-content);
+    }
+
+    @include desktop {
+      text-align: left;
+      font-size: 3rem;
+      display: grid;
+      grid-template-columns: minmax(180px, min-content);
     }
 
   }
@@ -256,6 +331,9 @@ h4 {
   .bgImage {
     @include backgroundImage("../images/footer.jpg");
     height: 400px;
+    @include desktop {
+      height: 750px;
+    }
   }
 
 }
